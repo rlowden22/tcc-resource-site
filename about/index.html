@@ -1,0 +1,70 @@
+<!-- ABOUTPAGE -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About TCC · TCC</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="icon" href="/assets/favicon.ico">
+</head>
+<body>
+    
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+      <a class="brand" href="/">
+        <img src="/assets/img/logo.png" alt="" aria-hidden="true">
+        <strong>TCC</strong>
+      </a>
+      <nav aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/about/" aria-current="page">About</a>
+        <a href="/programs-events/">Programs & Events</a>
+        <a href="/resources/">Resources</a>
+        <a href="/get-involved/donate/">Donate</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main page content -->
+  <main id="main" class="container">
+    <h1>About TCC</h1>
+    <p>TCC connects neighbors with local, inclusive resources and support.</p>
+
+    <h2>Our Mission</h2>
+    <p class="muted">Brief mission statement goes here.</p>
+
+    <h2>Who We Serve</h2>
+    <p class="muted">One paragraph describing the community and coverage area.</p>
+
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:info@example.org">info@example.org</a></p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="muted">© <span id="year"></span> TCC ·
+        <a href="/get-involved/volunteer/">Volunteer</a> ·
+        <a href="/get-involved/donate/">Donate</a>
+      </p>
+      <p class="muted">In a crisis? Call 988 or text 741741.</p>
+    </div>
+  </footer>
+
+  <!-- Small script: updates year + highlights current nav -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const here = location.pathname.replace(/\/+$/,'/') || '/';
+    document.querySelectorAll('nav a').forEach(a=>{
+      if(a.getAttribute('href')===here) a.setAttribute('aria-current','page');
+    });
+  </script>
+</body>
+</html>

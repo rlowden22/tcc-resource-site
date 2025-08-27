@@ -1,0 +1,88 @@
+<!--name change -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Name Change Guide · TCC</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="icon" href="/assets/favicon.ico">
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+      <a class="brand" href="/">
+        <img src="/assets/img/logo.png" alt="" aria-hidden="true">
+        <strong>TCC</strong>
+      </a>
+      <nav aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/programs-events/">Programs & Events</a>
+        <a href="/resources/" aria-current="page">Resources</a>
+        <a href="/other-info/">Other Info</a>
+        <a href="/get-involved/donate/">Donate</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main page content -->
+  <main id="main" class="container">
+    <h1>Name Change Guide</h1>
+    <p class="muted">Step-by-step instructions and resources for completing a legal name change. (Replace with real content later.)</p>
+
+    <section class="grid cards">
+      <article class="card">
+        <h2>Step 1: Gather Documents</h2>
+        <p>Describe what documents are needed here.</p>
+      </article>
+
+      <article class="card">
+        <h2>Step 2: File Paperwork</h2>
+        <p>Explain where and how to file the forms.</p>
+      </article>
+
+      <article class="card">
+        <h2>Step 3: Court Process</h2>
+        <p>Outline the hearing or publication requirements.</p>
+      </article>
+
+      <article class="card">
+        <h2>Step 4: Update IDs</h2>
+        <p>Information on updating driver’s license, passport, Social Security, etc.</p>
+      </article>
+
+      <!-- Add more steps/resources as needed -->
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="muted">© <span id="year"></span> TCC ·
+        <a href="/get-involved/volunteer/">Volunteer</a> ·
+        <a href="/get-involved/donate/">Donate</a>
+      </p>
+      <p class="muted">In a crisis? Call 988 or text 741741.</p>
+    </div>
+  </footer>
+
+  <!-- Small script: updates year + highlights current nav -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const here = location.pathname.replace(/\/+$/,'/') || '/';
+    document.querySelectorAll('nav a').forEach(a=>{
+      if (a.getAttribute('href') === here ||
+          (here.startsWith('/resources/name-change/') && a.getAttribute('href') === '/resources/')) {
+        a.setAttribute('aria-current', 'page');
+      }
+    });
+  </script>
+</body>
+</html>

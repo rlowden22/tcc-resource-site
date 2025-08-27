@@ -1,0 +1,69 @@
+<!-- DONATEPAGE -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Donate · TCC</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="icon" href="/assets/favicon.ico">
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+      <a class="brand" href="/">
+        <img src="/assets/img/logo.png" alt="" aria-hidden="true">
+        <strong>TCC</strong>
+      </a>
+      <nav aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/programs-events/">Programs & Events</a>
+        <a href="/resources/">Resources</a>
+        <a href="/get-involved/donate/" aria-current="page">Donate</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main page content -->
+  <main id="main" class="container">
+    <h1>Donate</h1>
+    <p>Your support keeps programs free and accessible.</p>
+
+    <h2>Ways to Give</h2>
+    <ul>
+      <li>Online: <a href="https://example.org/donate" target="_blank" rel="noopener">Donate securely</a></li>
+      <li>By mail: TCC, PO Box 123, Your City, CA</li>
+      <li>Employer match: Ask your HR about gift matching</li>
+    </ul>
+
+    <p class="muted">TCC is a 501(c)(3). Donations may be tax-deductible (consult your tax advisor).</p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="muted">© <span id="year"></span> TCC ·
+        <a href="/get-involved/volunteer/">Volunteer</a> ·
+        <a href="/get-involved/donate/">Donate</a>
+      </p>
+      <p class="muted">In a crisis? Call 988 or text 741741.</p>
+    </div>
+  </footer>
+
+  <!-- Small script: updates year + highlights current nav -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const here = location.pathname.replace(/\/+$/,'/') || '/';
+    document.querySelectorAll('nav a').forEach(a=>{
+      if(a.getAttribute('href')===here) a.setAttribute('aria-current','page');
+    });
+  </script>
+</body>
+</html>

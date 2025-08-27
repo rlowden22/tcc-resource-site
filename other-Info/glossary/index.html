@@ -1,0 +1,140 @@
+<!-- GLOSSARY PAGE -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glossary · TCC</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="icon" href="/assets/favicon.ico">
+  <style>
+    /* Page-specific niceties (optional) */
+    .alpha-nav { display:flex; flex-wrap:wrap; gap:.5rem; margin:1rem 0 1.5rem }
+    .alpha-nav a { text-decoration:none; border:1px solid var(--border); padding:.2rem .5rem; border-radius:.4rem }
+    .glossary dl { display:grid; grid-template-columns: 1fr; gap:1rem }
+    .glossary dt { font-weight:700 }
+    .glossary dd { margin: .25rem 0 0; color: var(--muted) }
+    @media (min-width: 720px){
+      .glossary dl { grid-template-columns: 1fr 1fr }
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+      <a class="brand" href="/">
+        <img src="/assets/img/logo.png" alt="" aria-hidden="true">
+        <strong>TCC</strong>
+      </a>
+      <nav aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/programs-events/">Programs & Events</a>
+        <a href="/resources/">Resources</a>
+        <a href="/other-info/">Other Info</a>
+        <a href="/get-involved/donate/">Donate</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main page content -->
+  <main id="main" class="container">
+    <h1>Glossary</h1>
+    <p class="muted">Plain-language definitions for terms used across this site. This page is for general information and is not legal or medical advice.</p>
+
+    <!-- Optional quick alphabet jump links (you can remove if not needed) -->
+    <nav class="alpha-nav" aria-label="Glossary alphabet navigation">
+      <a href="#A">A</a>
+      <a href="#C">C</a>
+      <a href="#H">H</a>
+      <a href="#I">I</a>
+      <a href="#N">N</a>
+      <a href="#P">P</a>
+      <a href="#S">S</a>
+    </nav>
+
+    <section class="glossary">
+      <h2 id="A">A</h2>
+      <dl>
+        <div>
+          <dt>Accessibility</dt>
+          <dd>Designing services and spaces so people with disabilities can use them equitably (e.g., ramps, captions, readable websites).</dd>
+        </div>
+      </dl>
+
+      <h2 id="C">C</h2>
+      <dl>
+        <div>
+          <dt>Case Manager</dt>
+          <dd>A trained professional who helps coordinate services (healthcare, housing, benefits) and advocates on your behalf.</dd>
+        </div>
+      </dl>
+
+      <h2 id="H">H</h2>
+      <dl>
+        <div>
+          <dt>Housing Navigator</dt>
+          <dd>Someone who assists with finding housing options, applications, and understanding eligibility requirements.</dd>
+        </div>
+      </dl>
+
+      <h2 id="I">I</h2>
+      <dl>
+        <div>
+          <dt>Insurance Navigator</dt>
+          <dd>A person or program that explains health insurance options and can help you enroll in coverage.</dd>
+        </div>
+      </dl>
+
+      <h2 id="N">N</h2>
+      <dl>
+        <div>
+          <dt>Name Change (Legal)</dt>
+          <dd>The official court process to change your legal name. Steps can include forms, filing fees, publication, and updated IDs.</dd>
+        </div>
+      </dl>
+
+      <h2 id="P">P</h2>
+      <dl>
+        <div>
+          <dt>Primary Care</dt>
+          <dd>Your main healthcare provider for routine care, referrals, and preventative services.</dd>
+        </div>
+      </dl>
+
+      <h2 id="S">S</h2>
+      <dl>
+        <div>
+          <dt>Sliding Scale</dt>
+          <dd>A payment model where fees are adjusted based on your income to make services more affordable.</dd>
+        </div>
+        <div>
+          <dt>Support Group</dt>
+          <dd>A facilitated meeting where people with shared experiences connect, share, and learn together.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <p class="muted">See also: <a href="/resources/">Resources</a> · <a href="/other-info/faqs/">FAQs</a> · <a href="/other-info/publications/">Publications</a></p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="muted">© <span id="year"></span> TCC ·
+        <a href="/get-involved/volunteer/">Volunteer</a> ·
+        <a href="/get-involved/donate/">Donate</a>
+      </p>
+      <p class="muted">In a crisis? Call 988 or text 741741.</p>
+    </div>
+  </footer>
+
+  <!-- Small script: updates year + highlights current nav -->
+  <script>
+    document.getElementBy

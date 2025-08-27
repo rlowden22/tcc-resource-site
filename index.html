@@ -1,1 +1,90 @@
-# HOME PAGE
+<!-- HOMEPAGE -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home · TCC</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="icon" href="/assets/favicon.ico">
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+      <a class="brand" href="/">
+        <img src="/assets/img/logo.png" alt="" aria-hidden="true">
+        <strong>TCC</strong>
+      </a>
+      <nav aria-label="Main">
+        <a href="/" aria-current="page">Home</a>
+        <a href="/about/">About</a>
+        <a href="/programs-events/">Programs & Events</a>
+        <a href="/resources/">Resources</a>
+        <a href="/other-info/">Other Info</a>
+        <a href="/get-involved/donate/">Donate</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main page content -->
+  <main id="main" class="container">
+    <section class="hero">
+      <h1>Welcome to TCC</h1>
+      <p class="muted">We connect our community to affirming resources, groups, and support.</p>
+      <p><a class="button" href="/resources/">Explore Resources</a></p>
+    </section>
+
+    <section class="grid cards">
+      <article class="card">
+        <h2>Programs & Events</h2>
+        <p>See upcoming groups, meetups, and community events.</p>
+        <p><a href="/programs-events/">View events →</a></p>
+      </article>
+
+      <article class="card">
+        <h2>Get Help</h2>
+        <p>Healthcare, mental health, housing assistance, and more.</p>
+        <p><a href="/resources/">Browse resources →</a></p>
+      </article>
+
+      <article class="card">
+        <h2>Other Information</h2>
+        <p>FAQs, glossary, partner organizations, and publications.</p>
+        <p><a href="/other-info/">Explore info →</a></p>
+      </article>
+
+      <article class="card">
+        <h2>Support TCC</h2>
+        <p>Your donation helps sustain programs and outreach.</p>
+        <p><a href="/get-involved/donate/">Donate →</a></p>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="muted">© <span id="year"></span> TCC ·
+        <a href="/get-involved/volunteer/">Volunteer</a> ·
+        <a href="/get-involved/donate/">Donate</a>
+      </p>
+      <p class="muted">In a crisis? Call 988 or text 741741.</p>
+    </div>
+  </footer>
+
+  <!-- Small script: updates year + highlights current nav -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const here = location.pathname.replace(/\/+$/,'/') || '/';
+    document.querySelectorAll('nav a').forEach(a=>{
+      if(a.getAttribute('href')===here) a.setAttribute('aria-current','page');
+    });
+  </script>
+</body>
+</html>

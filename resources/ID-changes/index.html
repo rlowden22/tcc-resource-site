@@ -1,17 +1,15 @@
-<!-- PROGRAMS AND EVENTS -->
+<!--ID change HOME -->
 
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Programs & Events · TCC</title>
+  <title>ID Changes · TCC</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
   <link rel="icon" href="/assets/favicon.ico">
 </head>
 <body>
-
-
   <!-- Skip link for accessibility -->
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -25,8 +23,9 @@
       <nav aria-label="Main">
         <a href="/">Home</a>
         <a href="/about/">About</a>
-        <a href="/programs-events/" aria-current="page">Programs & Events</a>
-        <a href="/resources/">Resources</a>
+        <a href="/programs-events/">Programs & Events</a>
+        <a href="/resources/" aria-current="page">Resources</a>
+        <a href="/other-info/">Other Info</a>
         <a href="/get-involved/donate/">Donate</a>
         <a href="/contact/">Contact</a>
       </nav>
@@ -35,22 +34,22 @@
 
   <!-- Main page content -->
   <main id="main" class="container">
-    <h1>Programs & Events</h1>
-    <p class="muted">Recurring groups, workshops, and community gatherings.</p>
+    <h1>ID Changes</h1>
+    <p class="muted">Guides for updating legal documents and identification. Choose a guide below to get started.</p>
 
     <section class="grid cards">
-      <article class="card">
-        <h2>Peer Support Group</h2>
-        <p>Weekly meetup focused on community and connection.</p>
-        <p class="muted">Tuesdays · 6–7:30pm</p>
-      </article>
-      <article class="card">
-        <h2>Resource Clinic</h2>
-        <p>Monthly drop-in for housing, healthcare, and legal navigation.</p>
-        <p class="muted">First Saturday</p>
-      </article>
-      <!-- Add more as needed -->
+      <a class="card" href="/resources/ID-changes/name-change/">
+        <h2>Name Change</h2>
+        <p>Step-by-step guide for legally changing your name and updating IDs.</p>
+      </a>
+
+      <a class="card" href="/resources/ID-changes/gender-change/">
+        <h2>Gender Marker Change</h2>
+        <p>Information on updating gender markers on legal documents and records.</p>
+      </a>
     </section>
+
+    <!-- Optional: add more ID-related guides here in the future -->
   </main>
 
   <!-- Footer -->
@@ -69,7 +68,10 @@
     document.getElementById('year').textContent = new Date().getFullYear();
     const here = location.pathname.replace(/\/+$/,'/') || '/';
     document.querySelectorAll('nav a').forEach(a=>{
-      if(a.getAttribute('href')===here) a.setAttribute('aria-current','page');
+      if (a.getAttribute('href') === here ||
+          (here.startsWith('/resources/id-changes/') && a.getAttribute('href') === '/resources/')) {
+        a.setAttribute('aria-current', 'page');
+      }
     });
   </script>
 </body>
