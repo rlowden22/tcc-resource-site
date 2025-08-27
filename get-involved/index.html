@@ -1,11 +1,11 @@
-<!-- MAIN RESOURCE PAGE-->
+<!-- GET INVOLVED-->
 
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Resources · TCC</title>
+  <title>Get Involved · TCC</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
   <link rel="icon" href="/assets/favicon.ico">
 </head>
@@ -13,7 +13,7 @@
   <!-- Skip link for accessibility -->
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Header -->
+   <!-- Header -->
   <header>
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
       <a class="brand" href="/">
@@ -30,29 +30,28 @@
         <a href="/contact/get-involved/contact">Contact</a>
       </nav>
     </div>
+  
   </header>
+
   <!-- Main page content -->
   <main id="main" class="container">
-    <!-- MAIN RESOURCE PAGE-->
-    <h1>Resources</h1>
-    <p class="muted">Find local support by category. If you’re in crisis: call 988 or text 741741.</p>
+    <h1>Get Involved</h1>
+    <p class="muted">Support TCC by donating, volunteering, or reaching out to learn more.</p>
 
     <section class="grid cards">
-      <a class="card" href="/resources/healthcare/">
-        <h2>Healthcare</h2>
-        <p>Clinics, primary care, sliding-scale services.</p>
+      <a class="card" href="/get-involved/donate/">
+        <h2>Donate</h2>
+        <p>Your support helps sustain programs and outreach.</p>
       </a>
-      <a class="card" href="/resources/mental-health/">
-        <h2>Mental Health</h2>
-        <p>Counseling, support groups, crisis lines.</p>
+
+      <a class="card" href="/get-involved/volunteer/">
+        <h2>Volunteer</h2>
+        <p>Help with events, outreach, and resource updates.</p>
       </a>
-      <a class="card" href="/resources/housing/">
-        <h2>Housing Help</h2>
-        <p>Shelters, rental assistance, tenant support.</p>
-      </a>
-      <a class="card" href="/resources/id-changes/">
-        <h2>ID Changes</h2>
-        <p>Steps, forms, and local assistance.</p>
+
+      <a class="card" href="/contact/">
+        <h2>Contact</h2>
+        <p>Get in touch with us for questions, collaborations, or more information.</p>
       </a>
     </section>
   </main>
@@ -73,8 +72,8 @@
     document.getElementById('year').textContent = new Date().getFullYear();
     const here = location.pathname.replace(/\/+$/,'/') || '/';
     document.querySelectorAll('nav a').forEach(a=>{
-      if(a.getAttribute('href')===here ||
-         (here.startsWith('/resources/') && a.getAttribute('href')==='/resources/')) {
+      if (a.getAttribute('href') === here ||
+          (here.startsWith('/get-involved/') && a.getAttribute('href') === '/get-involved/')) {
         a.setAttribute('aria-current','page');
       }
     });

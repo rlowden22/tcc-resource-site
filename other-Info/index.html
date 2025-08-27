@@ -1,11 +1,11 @@
-<!-- MAIN RESOURCE PAGE-->
+<!-- OTHER INFORMATION -->
 
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Resources · TCC</title>
+  <title>Other Information · TCC</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
   <link rel="icon" href="/assets/favicon.ico">
 </head>
@@ -13,6 +13,7 @@
   <!-- Skip link for accessibility -->
   <a class="skip-link" href="#main">Skip to content</a>
 
+  
   <!-- Header -->
   <header>
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
@@ -31,28 +32,31 @@
       </nav>
     </div>
   </header>
+
   <!-- Main page content -->
   <main id="main" class="container">
-    <!-- MAIN RESOURCE PAGE-->
-    <h1>Resources</h1>
-    <p class="muted">Find local support by category. If you’re in crisis: call 988 or text 741741.</p>
+    <h1>Other Information</h1>
+    <p class="muted">Additional resources and references, including FAQs, glossary, publications, and local partner organizations.</p>
 
     <section class="grid cards">
-      <a class="card" href="/resources/healthcare/">
-        <h2>Healthcare</h2>
-        <p>Clinics, primary care, sliding-scale services.</p>
+      <a class="card" href="/other-info/other-organizations/">
+        <h2>Other Local Organizations</h2>
+        <p>Links to community partners and allied organizations.</p>
       </a>
-      <a class="card" href="/resources/mental-health/">
-        <h2>Mental Health</h2>
-        <p>Counseling, support groups, crisis lines.</p>
+
+      <a class="card" href="/other-info/faqs/">
+        <h2>FAQs</h2>
+        <p>Quick answers to frequently asked questions about TCC and resources.</p>
       </a>
-      <a class="card" href="/resources/housing/">
-        <h2>Housing Help</h2>
-        <p>Shelters, rental assistance, tenant support.</p>
+
+      <a class="card" href="/other-info/glossary/">
+        <h2>Glossary</h2>
+        <p>Plain-language definitions of common terms.</p>
       </a>
-      <a class="card" href="/resources/id-changes/">
-        <h2>ID Changes</h2>
-        <p>Steps, forms, and local assistance.</p>
+
+      <a class="card" href="/other-info/publications/">
+        <h2>Publications</h2>
+        <p>Guides, reports, and downloadable resources.</p>
       </a>
     </section>
   </main>
@@ -73,8 +77,8 @@
     document.getElementById('year').textContent = new Date().getFullYear();
     const here = location.pathname.replace(/\/+$/,'/') || '/';
     document.querySelectorAll('nav a').forEach(a=>{
-      if(a.getAttribute('href')===here ||
-         (here.startsWith('/resources/') && a.getAttribute('href')==='/resources/')) {
+      if (a.getAttribute('href') === here ||
+          (here.startsWith('/other-info/') && a.getAttribute('href') === '/other-info/')) {
         a.setAttribute('aria-current','page');
       }
     });
