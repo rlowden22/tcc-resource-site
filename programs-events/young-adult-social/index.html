@@ -1,0 +1,115 @@
+<!-- young adult support group -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Programs & Events · TCC</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="icon" href="/assets/favicon.ico">
+</head>
+<body>
+
+
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Header -->
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+      <a class="brand" href="/">
+        <img src="/assets/img/logo.png" alt="" aria-hidden="true">
+        <strong>TCC</strong>
+      </a>
+      <nav aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/about/" aria-current="page">About</a>
+        <a href="/programs-events/">Programs & Events</a>
+        <a href="/resources/">Resources</a>
+        <a href="/other-Info/">Other info</a>
+        <a href="/get-involved">Get Involved</a>
+        <a href="/get-involved/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main page content -->
+  <!-- Main page content -->
+<main id="main" class="container">
+  <style>
+    .kv{width:100%;border-collapse:collapse;margin:1rem 0 2rem}
+    .kv th,.kv td{border:1px solid var(--border);padding:.9rem 1rem;text-align:left;vertical-align:top}
+    .kv th{width:180px;color:var(--muted);background:var(--card)}
+  </style>
+
+  <nav aria-label="Breadcrumb" class="muted" style="margin-bottom:1rem;">
+    <a href="/programs-events/">Programs & Events</a> › Trans* Young Adult Social Group
+  </nav>
+
+  <h1>Trans* Young Adult Social Group</h1>
+
+  <table class="kv" aria-describedby="group-desc">
+    <tr>
+      <th scope="row">When</th>
+      <td>2nd Saturday of each month, 2pm – 4pm</td>
+    </tr>
+    <tr>
+      <th scope="row">Where</th>
+      <td>
+        Varies. Sometimes at the GALA Pride &amp; Diversity Center, other times at parks,
+        businesses, or community events. Email us for details:
+        <a href="mailto:tcc@galacc.org">tcc@galacc.org</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Ages</th>
+      <td>18 – 40</td>
+    </tr>
+  </table>
+
+  <section id="group-desc">
+    <p>
+      This is a social group for transgender and nonbinary people, ages 18–40.
+      It isn’t a support group—it’s a place to get together, do something,
+      meet new people, and have fun!
+    </p>
+  </section>
+
+  <p class="muted" style="margin-top:1.5rem;">
+    ← <a href="/programs-events/">Back to Programs &amp; Events</a>
+  </p>
+</main>
+
+
+
+
+  <!-- Call for ideas -->
+  <p class="muted" style="margin-top:2rem;">
+    Have an idea for a new group or event? We’re always open to ideas!
+    Please <a href="/get-involved/contact/">reach out</a> with your suggestions.
+  </p>
+</main>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="muted">© <span id="year"></span> TCC ·
+        <a href="/get-involved/volunteer/">Volunteer</a> ·
+        <a href="/get-involved/donate/">Donate</a>
+      </p>
+      <p class="muted">In a crisis? Call 988 or text 741741.</p>
+    </div>
+  </footer>
+
+  <!-- Small script: updates year + highlights current nav -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const here = location.pathname.replace(/\/+$/,'/') || '/';
+    document.querySelectorAll('nav a').forEach(a=>{
+      if(a.getAttribute('href')===here) a.setAttribute('aria-current','page');
+    });
+  </script>
+</body>
+</html>

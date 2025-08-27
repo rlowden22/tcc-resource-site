@@ -1,0 +1,112 @@
+<!-- parent support group -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Programs & Events · TCC</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="icon" href="/assets/favicon.ico">
+</head>
+<body>
+
+
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Header -->
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+      <a class="brand" href="/">
+        <img src="/assets/img/logo.png" alt="" aria-hidden="true">
+        <strong>TCC</strong>
+      </a>
+      <nav aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/about/" aria-current="page">About</a>
+        <a href="/programs-events/">Programs & Events</a>
+        <a href="/resources/">Resources</a>
+        <a href="/other-Info/">Other info</a>
+        <a href="/get-involved">Get Involved</a>
+        <a href="/get-involved/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main page content -->
+<!-- Main page content -->
+<main id="main" class="container">
+  <style>
+    .kv{width:100%;border-collapse:collapse;margin:1rem 0 2rem}
+    .kv th,.kv td{border:1px solid var(--border);padding:.9rem 1rem;text-align:left;vertical-align:top}
+    .kv th{width:180px;color:var(--muted);background:var(--card)}
+  </style>
+
+  <nav aria-label="Breadcrumb" class="muted" style="margin-bottom:1rem;">
+    <a href="/programs-events/">Programs & Events</a> › Parent Support Group
+  </nav>
+
+  <h1>Parent Support Group</h1>
+
+  <p><strong>UPDATE:</strong> Our Parent Support Group is currently <em>on hold</em> while we train new facilitators. Please check back for updates.</p>
+
+  <table class="kv" aria-describedby="group-desc">
+    <tr>
+      <th scope="row">When</th>
+      <td>2nd Tuesday of each month, 6:15pm – 7:45pm</td>
+    </tr>
+    <tr>
+      <th scope="row">Where</th>
+      <td>
+        If you are interested in attending once the group resumes, please email us at
+        <a href="mailto:tcc@galacc.org">tcc@galacc.org/ </a></td>
+    </tr>
+  </table>
+
+  <section id="group-desc">
+    <p>
+      The “Stand Out” LGBTQ+ parent/family support group meets alongside our Trans Youth
+      Support Group. Parents can drop their kids off at the GALA Center and then connect
+      with other parents to discuss common issues. The group is open to the parents of all
+      lesbian, gay, bisexual, transgender, nonbinary, and questioning children.
+    </p>
+  </section>
+
+  <p class="muted" style="margin-top:1.5rem;">
+    ← <a href="/programs-events/">Back to Programs &amp; Events</a>
+  </p>
+</main>
+
+
+
+
+  <!-- Call for ideas -->
+  <p class="muted" style="margin-top:2rem;">
+    Have an idea for a new group or event? We’re always open to ideas!
+    Please <a href="/get-involved/contact/">reach out</a> with your suggestions.
+  </p>
+</main>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="muted">© <span id="year"></span> TCC ·
+        <a href="/get-involved/volunteer/">Volunteer</a> ·
+        <a href="/get-involved/donate/">Donate</a>
+      </p>
+      <p class="muted">In a crisis? Call 988 or text 741741.</p>
+    </div>
+  </footer>
+
+  <!-- Small script: updates year + highlights current nav -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const here = location.pathname.replace(/\/+$/,'/') || '/';
+    document.querySelectorAll('nav a').forEach(a=>{
+      if(a.getAttribute('href')===here) a.setAttribute('aria-current','page');
+    });
+  </script>
+</body>
+</html>
