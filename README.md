@@ -1,6 +1,10 @@
-# tcc-resource-site
+# Tranz Central Coast (TCC) Resource Site
 
-This project is a simple website designed to connect trans and gender diverse community members with local resources and other information. Phase one provides a clean, easy-to-navigate list of resources. Phase two will expand the project into a full-stack web application with features such as community submissions, search and category filters, and maps to make resources accessible.
+This project is a simple website for a local volunteer run grassroots org, Tranz Central Coast (TCC) based in San Luis Obispo, CA. It is designed to connect trans and gender diverse community members with local resources and other information. 
+
+**Phase one** includes providing a clean, easy-to-navigate list of resources as soon as possible for the community. 
+
+**Phase two** will expand the project into a full-stack web application with features such as search and category filters, community submissions, and maps to make resources accessible. Other features will also be added after a community based needs assessment. 
 
 ---
 
