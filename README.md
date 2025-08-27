@@ -31,7 +31,7 @@ This project is a simple website designed to connect LGBTQIA+ community members 
 
 ## 📁 Suggested Folder Structure
 
-/index.html
+/index.html 
 /about/index.html
 /programs-events/index.html
 /resources/index.html
